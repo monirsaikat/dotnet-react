@@ -1,0 +1,442 @@
+.appShell {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 28px 22px;
+  border-right: 1px solid var(--line);
+  background: #f0f2ed;
+  display: flex;
+  flex-direction: column;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo span {
+  width: 32px;
+  height: 32px;
+  font-size: 1rem;
+}
+.sidebar nav {
+  display: grid;
+  gap: 7px;
+  margin-top: 56px;
+}
+.sidebar nav a {
+  padding: 11px 14px;
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.sidebar nav .active {
+  background: white;
+  color: var(--ink);
+  font-weight: 800;
+}
+.profile {
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--green);
+  color: white;
+  font-weight: 800;
+}
+.profile div:nth-child(2) {
+  display: grid;
+  font-size: 0.78rem;
+  min-width: 0;
+}
+.profile div:nth-child(2) strong {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.profile button {
+  margin-left: auto;
+  border: 0;
+  background: none;
+  font-size: 1.1rem;
+}
+.workspace {
+  padding: 42px clamp(24px, 5vw, 76px) 70px;
+  min-width: 0;
+}
+.workspace > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 38px;
+}
+.workspace > header h1 {
+  font-size: clamp(2rem, 3vw, 3.1rem);
+  margin: 8px 0;
+}
+.rolePill,
+.status {
+  font-size: 0.7rem;
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: #eceeea;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.rolePill {
+  border: 1px solid var(--line);
+  background: white;
+}
+.status.green {
+  background: #e3f0e5;
+  color: #276344;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.focusBanner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  align-items: center;
+  gap: 30px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  padding: 30px 34px;
+  border-radius: 12px;
+  background: var(--green);
+  color: white;
+  isolation: isolate;
+}
+.focusBanner .eyebrow {
+  color: var(--lime);
+}
+.focusBanner h2 {
+  max-width: 700px;
+  margin: 8px 0 10px;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+.focusBanner p {
+  max-width: 660px;
+  margin: 0;
+  color: #dce6df;
+  line-height: 1.6;
+}
+.focusMetric {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 5px;
+  padding-left: 24px;
+  border-left: 1px solid #ffffff3b;
+}
+.focusMetric > span,
+.focusMetric small {
+  color: #dce6df;
+  font-size: 0.7rem;
+}
+.focusMetric strong {
+  color: var(--lime);
+  font:
+    3.2rem Georgia,
+    serif;
+  line-height: 1;
+}
+.focusOrbit {
+  position: absolute;
+  right: -100px;
+  width: 330px;
+  height: 330px;
+  border: 1px solid #ffffff1f;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 42px #ffffff08,
+    0 0 0 84px #ffffff08;
+  z-index: -1;
+}
+.stats article,
+.panel {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.stats article {
+  padding: 22px;
+  display: grid;
+  gap: 7px;
+}
+.stats span,
+.stats small {
+  font-size: 0.75rem;
+}
+.stats strong {
+  font: 2.2rem Georgia;
+}
+.contentGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.8fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.panel {
+  padding: 24px;
+  min-width: 0;
+}
+.panelTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 16px;
+}
+.panelTitle h2 {
+  margin: 7px 0 18px;
+}
+.panelTitle > span {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.assignmentList {
+  display: grid;
+}
+.filterBar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 160px;
+  gap: 10px;
+  margin: 4px 0 12px;
+}
+.assignmentRow {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: transparent;
+  text-align: left;
+  padding: 15px 0;
+  color: var(--ink);
+}
+.assignmentRow > span:nth-child(2) {
+  display: grid;
+  gap: 5px;
+}
+.dateBox {
+  height: 45px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  line-height: 1;
+}
+.dateBox small {
+  text-transform: uppercase;
+  font-size: 0.58rem;
+}
+.assignmentRow.static {
+  cursor: default;
+}
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.check {
+  display: flex !important;
+  grid-template-columns: auto 1fr !important;
+  align-items: center;
+}
+.check input {
+  width: auto;
+}
+.reviewPanel {
+  margin-bottom: 18px;
+}
+.selectedWorkspace {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.75fr) minmax(0, 1.25fr);
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+.editorPanel {
+  position: sticky;
+  top: 24px;
+}
+.formActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.dangerButton,
+.tableAction {
+  border: 1px solid #d9b8ad;
+  border-radius: 7px;
+  background: #fff7f4;
+  color: #8d3b2c;
+  padding: 10px 13px;
+  font-weight: 700;
+}
+.tableAction {
+  border-color: var(--line);
+  background: white;
+  color: var(--muted);
+  padding: 7px 10px;
+  font-size: 0.72rem;
+}
+.submission {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 0.6fr);
+  gap: 24px;
+  border-top: 1px solid var(--line);
+  padding: 20px 0;
+}
+.submission > div {
+  display: grid;
+  gap: 7px;
+}
+.submission p {
+  white-space: pre-wrap;
+  line-height: 1.55;
+}
+.submission form {
+  display: grid;
+  gap: 8px;
+}
+.empty {
+  padding: 32px 0;
+  color: var(--muted);
+}
+.studentAssignment {
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+}
+.studentAssignment p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+.studentAssignment form {
+  display: grid;
+  gap: 10px;
+}
+.resultCard,
+.courseRow {
+  border-top: 1px solid var(--line);
+  padding: 17px 0;
+}
+.managedRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.studentMeta {
+  display: grid;
+  justify-items: end;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+.status.urgent {
+  background: #fff0e0;
+  color: #9b4a14;
+}
+.submissionOverview {
+  margin-top: 18px;
+}
+.reviewRate {
+  display: grid;
+  justify-items: end;
+}
+.reviewRate strong {
+  color: var(--green);
+  font:
+    2rem Georgia,
+    serif;
+}
+.submissionCards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.submissionCard {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfa;
+}
+.submissionCard > div:first-child,
+.submissionScore {
+  display: grid;
+  gap: 7px;
+}
+.submissionScore {
+  justify-items: end;
+  align-content: start;
+}
+.submissionScore > strong {
+  font:
+    1.35rem Georgia,
+    serif;
+}
+.resultCard > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.resultCard p {
+  font: 1.4rem Georgia;
+  margin: 13px 0 6px;
+}
+.courseRow > div {
+  display: grid;
+  gap: 6px;
+}
+.tableWrap {
+  overflow: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+th {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+}
+th,
+td {
+  padding: 13px 8px;
+  border-top: 1px solid var(--line);
+}
+td:first-child {
+  display: grid;
+  gap: 4px;
+  font-size: 0.85rem;
+}
+td {
+  font-size: 0.8rem;
+}

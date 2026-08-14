@@ -1,0 +1,153 @@
+.loginShell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+}
+.brandPanel {
+  padding: 56px 8vw;
+  background: var(--green);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.brandPanel:after {
+  content: "";
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  border: 1px solid #ffffff30;
+  border-radius: 50%;
+  right: -180px;
+  bottom: -170px;
+  box-shadow:
+    0 0 0 70px #ffffff09,
+    0 0 0 140px #ffffff09;
+}
+.brandPanel h1 {
+  font-size: clamp(3rem, 6vw, 6.5rem);
+  max-width: 680px;
+  margin: 18px 0 28px;
+}
+.brandPanel p {
+  max-width: 520px;
+  color: #dce6df;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.brandPanel .eyebrow {
+  color: var(--lime);
+}
+.brandMark,
+.logo span {
+  display: grid;
+  place-items: center;
+  background: var(--lime);
+  color: var(--green);
+  font: 700 1.4rem Georgia;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+.featureLine {
+  border-top: 1px solid #ffffff33;
+  padding-top: 26px;
+  display: flex;
+  gap: 24px;
+  z-index: 1;
+}
+.featureLine span {
+  color: var(--lime);
+  font-weight: 800;
+}
+.featureLine p {
+  margin: 0;
+}
+.loginPanel {
+  display: grid;
+  place-items: center;
+  padding: 40px;
+}
+.loginCard {
+  width: min(430px, 100%);
+}
+.loginCard h2 {
+  font-size: 2.1rem;
+  margin: 12px 0;
+}
+.loginCard > p {
+  margin-bottom: 34px;
+}
+.loginCard label,
+.formPanel label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin: 16px 0;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: white;
+  padding: 13px 14px;
+  border-radius: 7px;
+  outline: none;
+  color: var(--ink);
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px #1f5a4315;
+}
+textarea {
+  resize: vertical;
+  min-height: 92px;
+}
+.primary,
+.secondary {
+  border: 0;
+  border-radius: 7px;
+  padding: 13px 18px;
+  font-weight: 800;
+}
+.primary {
+  background: var(--green);
+  color: white;
+}
+.loginCard > .primary {
+  width: 100%;
+  margin-top: 8px;
+}
+.primary:disabled {
+  opacity: 0.6;
+}
+.secondary {
+  background: var(--soft);
+  color: var(--green);
+}
+.demoAccounts {
+  display: flex;
+  gap: 8px;
+  margin-top: 18px;
+}
+.demoAccounts button {
+  flex: 1;
+  border: 1px solid var(--line);
+  background: transparent;
+  border-radius: 6px;
+  padding: 9px;
+  color: var(--muted);
+}
+.alert {
+  background: #fff0e6;
+  color: #8d3b15;
+  padding: 12px 16px;
+  border-radius: 7px;
+  margin: 12px 0;
+}

@@ -1,0 +1,104 @@
+@media (max-width: 900px) {
+  .loginShell {
+    grid-template-columns: 1fr;
+  }
+  .brandPanel {
+    min-height: 400px;
+  }
+  .appShell {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+  }
+  .sidebar nav {
+    display: none;
+  }
+  .profile {
+    margin: 0 0 0 auto;
+    border: 0;
+    padding: 0;
+  }
+  .workspace {
+    padding-top: 28px;
+  }
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+  .selectedWorkspace {
+    grid-template-columns: 1fr;
+  }
+  .editorPanel {
+    position: static;
+  }
+}
+@media (max-width: 600px) {
+  .brandPanel {
+    padding: 32px 24px;
+    min-height: 360px;
+  }
+  .brandPanel h1 {
+    font-size: 3rem;
+  }
+  .loginPanel {
+    padding: 42px 24px;
+  }
+  .sidebar {
+    padding: 16px;
+  }
+  .profile div:nth-child(2) {
+    display: none;
+  }
+  .workspace > header {
+    display: block;
+  }
+  .rolePill {
+    display: inline-block;
+  }
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  .stats article {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+  .stats article small {
+    grid-column: 1/-1;
+  }
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+  .focusBanner {
+    grid-template-columns: 1fr;
+    padding: 25px 22px;
+  }
+  .focusMetric {
+    padding: 18px 0 0;
+    border-top: 1px solid #ffffff3b;
+    border-left: 0;
+  }
+  .filterBar,
+  .submissionCards {
+    grid-template-columns: 1fr;
+  }
+  .fieldRow,
+  .submission {
+    grid-template-columns: 1fr;
+  }
+  .panel {
+    padding: 18px;
+  }
+  .assignmentRow {
+    grid-template-columns: 42px 1fr;
+  }
+  .assignmentRow > .status {
+    grid-column: 2;
+    width: max-content;
+  }
+  .demoAccounts {
+    flex-wrap: wrap;
+  }
+}
